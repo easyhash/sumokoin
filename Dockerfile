@@ -24,9 +24,9 @@ RUN mkdir -p /daemon && mkdir -p /daemon/data && mkdir -p /daemon
 
 # Install Daemon
 WORKDIR /daemon/
-RUN git clone https://github.com/sumoprojects/sumokoin.git src
+RUN git clone https://github.com/sumoproject/sumokoin.git src
 WORKDIR /daemon/src/
-RUN make
+RUN make -j$(nproc)
 
 RUN mv /daemon/src/build/release/bin/* /daemon && rm -rf /daemon/src
 WORKDIR /daemon/
