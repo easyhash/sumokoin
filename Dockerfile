@@ -16,6 +16,10 @@ RUN set -x \
 		build-essential \
 		libzmq3-dev \
 		wget \
+		autoconf \
+                automake \
+		libtool-bin \
+                bzip2 \
 	' \
 	&& apt-get -qq update \
 	&& apt-get -qq install -y $buildDeps
