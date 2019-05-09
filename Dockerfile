@@ -11,6 +11,8 @@ RUN set -x \
 		libssl-dev \
 		make \
 		pkg-config \
+		graphviz \
+		doxygen \
 		build-essential \
 		libzmq3-dev \
 		wget \
